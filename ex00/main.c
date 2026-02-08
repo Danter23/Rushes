@@ -1,26 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   str_to_int_array.c                                 :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbaltza- <jbaltza-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/07 14:15:30 by alcristo          #+#    #+#             */
-/*   Updated: 2026/02/08 13:27:18 by jbaltza-         ###   ########.fr       */
+/*   Created: 2026/02/08 13:24:20 by jbaltza-          #+#    #+#             */
+/*   Updated: 2026/02/08 13:26:11 by jbaltza-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	str_to_int_arr(char *raw_conditions, int clean_conditions, int length)
-{
-	int	length;
-	int	i;
-
-	length = length * 2 + 1;
-	i = 0;
-	while (i < length)
-	{
-		int_conditions[i / 2] = str_conditions[i];
-		i = i + 2;
-	}
-	write (1, &conditions, 16);
-}
+#include <unistd.h>

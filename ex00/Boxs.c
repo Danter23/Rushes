@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Boxs.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbaltza- <jbaltza-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: alcristo <alcristo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 16:55:08 by jbaltza-          #+#    #+#             */
-/*   Updated: 2026/02/07 23:08:39 by jbaltza-         ###   ########.fr       */
+/*   Updated: 2026/02/08 11:55:39 by alcristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,20 @@
 void	ft_print_board(int *array, int row_length)
 {
 	int		i;
-	char	pepe;
+	char	rows;
 
 	i = 0;
-
-	while (i < row_length*row_length)
+	while (i < row_length * row_length)
 	{
-		if(i %row_length == 0)
-		write(1, "\n", 1);
-		pepe = array[i] + '0';
-		write(1, &pepe, 1);
-		i++;
+		if (i % row_length == 0)
+		{
+			write(1, "\n", 1);
+			rows = array[i] + '0';
+			write(1, &rows, 1);
+			i++;
+		}
 	}
-	// return (0);
 }
-
 
 // int main (void)
 // {

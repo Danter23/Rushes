@@ -3,18 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   start.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbaltza- <jbaltza-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: alcristo <alcristo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 14:15:30 by alcristo          #+#    #+#             */
-/*   Updated: 2026/02/07 20:50:52 by alcristo         ###   ########.fr       */
+/*   Updated: 2026/02/08 10:52:37 by alcristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //ESTO NOS HACE REFERENCIA AL DOCUMENTO QUE PRINTEA LOS VALORES
 #include <unistd.h>
-//Esto son los comparadores de cada edificio y no se repitan puntos cardinales
 
-int	ft_visual_check(int	visuals[16])
+void	ft_rush01_place(int visuals[16]);
+
+int	ft_visual_check(int visuals[16])
 {
 	int	iterator;
 	int	has_one;
@@ -47,7 +48,7 @@ int	ft_corner_check(int corner1, int corner2)
 	int	error;
 
 	error = 0;
-	if (corner1 == 1 || corner2 == 1) 
+	if (corner1 == 1 || corner2 == 1)
 	{
 		if (corner1 != corner2)
 		{
@@ -61,8 +62,6 @@ int	ft_rush01_start(int visuals[16])
 {
 	int	error;
 
-	
-	//Esto son las esquinas del cuadrado de aqui hacia abajo 
 	while (error == 0)
 	{
 		error = ft_visual_check(visuals);
